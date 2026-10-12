@@ -1,0 +1,71 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/config_schema.json",
+  "enabled": true,
+  "settings": {
+    "EnableDistanceCulling": {
+      "title": "Enable Distance Culling",
+      "type": "toggle",
+      "value": true,
+      "tooltip": "Only send your VR tracking to players within the activation distance. If disabled, tracking is sent to EVERY player that has this mod, which increases network usage."
+    },
+    "ActivationDistance": {
+      "title": "Activation Distance (m)",
+      "type": "slider",
+      "value": 10,
+      "min": 1,
+      "max": 50,
+      "tooltip": "Players closer than this many meters start receiving your VR tracking."
+    },
+    "HysteresisMargin": {
+      "title": "Hysteresis Margin (m)",
+      "type": "slider",
+      "value": 2,
+      "min": 0,
+      "max": 10,
+      "tooltip": "Extra meters beyond the activation distance before a player stops receiving your VR tracking. Prevents flickering at the boundary."
+    },
+    "TrackingUpdateRate": {
+      "title": "Tracking Update Rate (Hz)",
+      "type": "slider",
+      "value": 10,
+      "min": 5,
+      "max": 15,
+      "tooltip": "Maximum tracking updates sent per second. Lower values use less bandwidth."
+    },
+    "EnableAdaptiveUpdateRate": {
+      "title": "Adaptive Update Rate",
+      "type": "toggle",
+      "value": true,
+      "tooltip": "Drop to the minimum update rate while your head and hands are moving slowly."
+    },
+    "MinimumUpdateRate": {
+      "title": "Minimum Update Rate (Hz)",
+      "type": "slider",
+      "value": 5,
+      "min": 1,
+      "max": 15,
+      "tooltip": "Update rate used during slow movement when the adaptive update rate is enabled. Never higher than the tracking update rate."
+    },
+    "Debug Options": {
+      "type": "separator"
+    },
+    "EnableDebugVisualization": {
+      "title": "[DEBUG] Tracking Markers",
+      "type": "toggle",
+      "value": false,
+      "tooltip": "[DEBUG] Shows markers at the received head and hand positions of VR players."
+    },
+    "EnableNetworkDiagnostics": {
+      "title": "[DEBUG] Network Diagnostics",
+      "type": "toggle",
+      "value": false,
+      "tooltip": "[DEBUG] Prints tracking network statistics to the console every 5 seconds."
+    },
+    "DebugSimulateVR": {
+      "title": "[DEBUG] Simulate VR Poses",
+      "type": "toggle",
+      "value": false,
+      "tooltip": "[DEBUG] Sends synthetic head and hand poses without a headset, for testing without NomaiVR."
+    }
+  }
+}

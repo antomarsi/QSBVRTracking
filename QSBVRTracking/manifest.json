@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
+  "filename": "QSBVRTracking.dll",
+  "author": "antomarsi",
+  "name": "QSBVRTracking",
+  "uniqueName": "antomarsi.QSBVRTracking",
+  "version": "0.0.1",
+  "owmlVersion": "2.16.1",
+  "dependencies": []
+}
